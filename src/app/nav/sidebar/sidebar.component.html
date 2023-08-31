@@ -1,0 +1,97 @@
+<mat-drawer-container class="example-container">
+
+  <mat-drawer mode="side" opened *ngIf="isLogin">
+
+    <div id="bloc_page" (click)="goHome()">
+      <header>
+        <a><img [src]="myImage" alt="Logo_page" title="Accueil" id="logo" /></a>
+      </header>
+
+    </div>
+    <mat-list role="list">
+
+      <mat-list-item role="listitem" routerLink="/SERVICE">
+        <mat-icon>work_outline</mat-icon>
+        <a>Liste_SERVICE</a>
+      </mat-list-item>
+
+      <mat-list-item role="listitem" routerLink="/sexe">
+        <mat-icon>nature_people</mat-icon>
+        <a>Liste_SEXE</a>
+      </mat-list-item>
+
+      <mat-list-item role="listitem" routerLink="/Employee">
+        <mat-icon>perm_identity</mat-icon>
+        <a>Expéditeur</a>
+      </mat-list-item>
+      
+      
+      <mat-list-item role="listitem" routerLink="/correspondant">
+        <mat-icon>perm_identity</mat-icon>
+        <a>Correspondant</a>
+      </mat-list-item>
+
+
+      <mat-list-item role="listitem" routerLink="/typecourrier">
+        <mat-icon>chat_bubble</mat-icon>
+        <a>Liste_Type_Courrier</a>
+      </mat-list-item>
+
+      <mat-list-item role="listitem" routerLink="/Naturecourrier">
+        <mat-icon>chat_bubble</mat-icon>
+        <a>List_Nature_Courrier</a>
+      </mat-list-item>
+
+      <mat-list-item role="listitem" routerLink="/Formecourrier">
+        <mat-icon>chat_bubble</mat-icon>
+        <a>List_Forme_Courrier</a>
+      </mat-list-item>
+
+      <mat-list-item role="listitem" routerLink="/Copie_Scanne">
+        <mat-icon>photo_camera</mat-icon>
+        <a>Liste_Copie_Scan</a>
+      </mat-list-item>
+
+      <mat-list-item role="listitem" routerLink="/Etat">
+        <mat-icon>chat_bubble</mat-icon>
+        <a>Liste_Etat_Courrier</a>
+      </mat-list-item>
+
+      <mat-list-item role="listitem" routerLink="/courrier">
+        <mat-icon></mat-icon>
+        <a>courrier</a>
+      </mat-list-item>
+
+    </mat-list>
+
+
+  </mat-drawer>
+
+  <mat-drawer mode="side" opened *ngIf="!isLogin">
+    <div id="bloc_page">
+      <header>
+        <img [src]="myImage" alt="Logo_page" title="Accueil" id="logo" />
+      </header>
+
+    </div>
+    <mat-list role="list">
+      <mat-list-item role="listitem" routerLink="/inscription">
+        <mat-icon>lock</mat-icon>
+        <a>Inscription</a>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/connexion">
+        <mat-icon>lock_open</mat-icon>
+        <a>Connexion</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div *ngIf="isLogin">
+      <app-toolbar></app-toolbar>
+    </div>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

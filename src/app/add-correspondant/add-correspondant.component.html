@@ -1,0 +1,62 @@
+<form [formGroup]="correspondantForm">
+  <h2 mat-dialog-title>Ajouter un genre de sexe</h2>
+  <mat-dialog-content class="mat-typography">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Matricule</mat-label>
+      <input matInput placeholder="Saisissez  un Matricule" formControlName="matricule" />
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>nOM_Employee</mat-label>
+      <input matInput placeholder="Saisissez  un nom" formControlName="nom" />
+    </mat-form-field>
+
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Fonction</mat-label>
+      <input matInput placeholder="Saisissez  une Fonction" formControlName="fonction" />
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>CIN</mat-label>
+      <input matInput placeholder="Saisissez  un CIN" formControlName="cin" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Adresse</mat-label>
+      <input matInput placeholder="Saisissez  une Adresse" formControlName="address" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Datenaissance</mat-label>
+      <input matInput placeholder="Saisissez  une Datenaissance" formControlName="datenaissance" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a Sexe</mat-label>
+      <mat-select formControlName="sexe">
+        <mat-option *ngFor="let sexe of listsexe" [value]="sexe.id">{{sexe.genre}} </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a Service</mat-label>
+      <mat-select formControlName="service">
+        <mat-option *ngFor="let service of listservice" [value]="service.id">{{service.nom}} </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>Annuler</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="onSubmit()">
+      Enregistrer
+    </button>
+  </mat-dialog-actions>
+</form>

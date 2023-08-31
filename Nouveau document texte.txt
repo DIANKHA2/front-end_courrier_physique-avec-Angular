@@ -1,0 +1,8 @@
+PREPAration des données : transformation, analyse de corolation, 
+les methodes d'apprentissage utilisées
+les mesures de petformance utilisé
+presentation des résultats et choix du meilleur modéle(sous forme tableau représentant les critéres)
+Déploiement du meilleur  
+
+
+xgboost  

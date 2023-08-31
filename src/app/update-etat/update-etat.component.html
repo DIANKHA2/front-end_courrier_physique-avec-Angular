@@ -1,0 +1,14 @@
+<form [formGroup]="EtAtForm">
+  <h2 mat-dialog-title>Ajouter une categorie</h2>
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="outline">
+      <mat-label>EtAT</mat-label>
+      <input matInput placeholder="Saisissez un genre" formControlName="nature_etat" />
+    </mat-form-field>
+
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>Annuler</button>
+    <button mat-button (click)="onSubmit()">Enregistrer</button>
+  </mat-dialog-actions>
+</form>

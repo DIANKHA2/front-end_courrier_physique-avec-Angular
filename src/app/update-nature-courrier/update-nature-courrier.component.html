@@ -1,0 +1,14 @@
+<form [formGroup]="nAtureForm">
+  <h2 mat-dialog-title>modifier une nature de courrier</h2>
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="outline">
+      <mat-label>NaTuRe</mat-label>
+      <input matInput placeholder="Saisissez une nature de courrie" formControlName="nature" />
+    </mat-form-field>
+
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>Annuler</button>
+    <button mat-button (click)="onSubmit()">Enregistrer</button>
+  </mat-dialog-actions>
+</form>

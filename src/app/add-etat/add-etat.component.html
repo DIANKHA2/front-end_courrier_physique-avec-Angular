@@ -1,0 +1,21 @@
+<form [formGroup]="etat">
+  <h2 mat-dialog-title>Ajouter un etat de courrier</h2>
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="outline">
+      <mat-label>EtAt</mat-label>
+      <input matInput placeholder="Saisissez  un etat de courrier" formControlName="nature_etat" />
+
+      <mat-icon matSuffix><mat-icon svgIcon="thumbs-up" aria-hidden="false"
+          aria-label="Example thumbs up SVG icon"></mat-icon>
+      </mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>Annuler</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="onSubmit()">
+      Enregistrer
+    </button>
+  </mat-dialog-actions>
+</form>

@@ -1,0 +1,118 @@
+<form [formGroup]="Enregister" (ngSubmit)="HandleSubmit()">
+<mat-stepper [linear]="isLinear" #stepper>
+  
+  
+  <mat-step [stepControl]="f1form"  errorMessage="Name is required.">
+    <div formGroupName="f1">
+      <ng-template matStepLabel>Envoie_courrier</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>ref</mat-label>
+          <input matInput placeholder="ref" formControlName="ref" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>date</mat-label>
+          <input matInput placeholder="date" formControlName="date" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a copieScanee</mat-label>
+          <mat-select formControlName="copieScanee">
+            <mat-option *ngFor="let copieScanee of listcopieScanee" [value]="copieScanee.id">{{copieScanee.copie}} </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a typecourrier</mat-label>
+          <mat-select formControlName="typecourrier">
+            <mat-option *ngFor="let typecourrier of listtypecourrier" [value]="typecourrier.id">{{typecourrier.type}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a naturecourrier</mat-label>
+          <mat-select formControlName="naturecourrier">
+            <mat-option *ngFor="let naturecourrier of listnaturecourrier" [value]="naturecourrier.id">{{naturecourrier.nature}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a forme</mat-label>
+          <mat-select formControlName="forme">
+            <mat-option *ngFor="let forme of listforme" [value]="forme.id">{{forme.forme_courrier}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a etat</mat-label>
+          <mat-select formControlName="etat">
+            <mat-option *ngFor="let etat of listetat" [value]="etat.id">{{etat.nature_etat}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <p>Go to a different step to see the error state</p>
+          <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </div>
+    </div>
+  </mat-step>
+
+
+  <mat-step [stepControl]="f2form" errorMessage="Name is required.">
+    <div formGroupName="f2">
+      <ng-template matStepLabel>Expéditeur</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Objet</mat-label>
+          <input matInput placeholder="objet" formControlName="objet" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a etat</mat-label>
+          <mat-autocomplete formControlName="employee">
+            <mat-option *ngFor="let employee of listnomemployee" [value]="employee">{{employee.nom}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+      
+
+        <div>
+          <p>Go to a different step to see the error state</p>
+          <button mat-raised-button color="primary" matStepperPrevious>Back</button>|
+          <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </div>
+    </div>    
+
+  </mat-step>
+
+  <mat-step [stepControl]="f3form" errorMessage="Name is required.">
+    <div formGroupName="f3">
+      <ng-template matStepLabel>Correspondant</ng-template>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Correspondant</mat-label>
+        <input matInput placeholder="Correspondant" formControlName="correspondant" required>
+      </mat-form-field>
+      
+      <mat-form-field appearance="fill">
+      <mat-label>Fax</mat-label>
+      <input matInput placeholder="Fax" formControlName="fax" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+      <mat-label>Typefax</mat-label>
+      <input matInput placeholder="Typefax" formControlName="typefax" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Details</mat-label>
+        <input matInput placeholder="Details" formControlName="details" required>
+      </mat-form-field>
+      <div>
+        <p>Go to a different step to see the error state</p>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>|
+        <button mat-raised-button color="accent" >Submit</button>
+      </div>
+    </div>
+  </mat-step>
+
+ 
+</mat-stepper>
+</form>

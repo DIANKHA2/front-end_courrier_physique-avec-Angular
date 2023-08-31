@@ -1,0 +1,45 @@
+<form [formGroup]="copiescanneForm">
+  <h2 mat-dialog-title>Ajouter un copie scan</h2>
+  <mat-dialog-content class="mat-typography">
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>CopIe</mat-label>
+      <input matInput placeholder="Saisissez une copie" formControlName="copie" />
+
+      <mat-icon matSuffix><mat-icon svgIcon="thumbs-up" aria-hidden="false"
+          aria-label="Example thumbs up SVG icon"></mat-icon>
+      </mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>cOmmentaire</mat-label>
+      <input matInput placeholder="Saisissez un commentaire " formControlName="commentaire" />
+
+     <mat-icon matSuffix><mat-icon svgIcon="thumbs-up" aria-hidden="false"
+          aria-label="Example thumbs up SVG icon"></mat-icon>
+      </mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>date</mat-label>
+      <input matInput placeholder="Saisissez une date " formControlName="date" />
+
+      <mat-icon matSuffix><mat-icon svgIcon="thumbs-up" aria-hidden="false"
+          aria-label="Example thumbs up SVG icon"></mat-icon>
+      </mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+
+
+
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>Annuler</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="onSubmit()">
+      Enregistrer
+    </button>
+  </mat-dialog-actions>
+</form>

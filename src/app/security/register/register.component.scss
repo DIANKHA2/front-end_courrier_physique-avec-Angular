@@ -1,0 +1,92 @@
+body {
+  font-family: "trebuchet ms", sans-serif;
+  font-size: 90%;
+}
+
+fieldset {
+  padding: 0 20px 20px 20px;
+  margin-bottom: 10px;
+  border: 1px solid #DF3F3F;
+}
+
+legend {
+  color: #DF3F3F;
+  font-weight: bold
+}
+
+label {
+  color: white;
+  margin-top: 30px;
+  display: block;
+  margin-left: 90px;
+  font-size: 150%
+}
+
+label.inline {
+  display: inline;
+  margin-right: 50px;
+}
+
+input,
+textarea,
+select,
+option {
+  background-color: #FFF3F3;
+}
+
+input,
+textarea,
+select {
+  padding: 3px;
+  border-radius: 5px;
+  width: 600px;
+  height: 50px;
+  box-shadow: 1px 1px 2px #C0C0C0 inset;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+select {
+  margin-top: 10px;
+}
+
+input[type=radio] {
+  background-color: transparent;
+  border: none;
+  width: 10px;
+}
+
+input[type=submit],
+input[type=reset] {
+  width: 100px;
+  margin-left: 5px;
+  box-shadow: 1px 1px 1px #D83F3D;
+  cursor: pointer;
+}
+
+.example-card {
+  max-width: 1000px;
+  border-radius: 10% 30% 50% 70%;
+  padding-left: 170px;
+  padding-bottom: 100px;
+}
+
+button {
+  background-color: lawngreen;
+  width: 120px;
+  border-radius: 30px;
+  height: 40px;
+  margin-left: 92px;
+  margin-top: -10px;
+}
+
+mat-card {
+  display: block;
+  margin: auto;
+  margin-top: 300px;
+  padding-top: 50px;
+  width: 1000000px;
+  height: auto;
+
+}
